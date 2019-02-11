@@ -1,0 +1,11 @@
+[package]
+
+	name    = "torset-afl"
+	version = "0.1.0"
+	authors = [ "Naja Melan <najamelan on autistici.org>" ]
+	edition = "2018"
+
+[dependencies]
+
+	afl    = "0.4.3"
+	torset = { path = "../torset" }

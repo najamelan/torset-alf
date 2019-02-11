@@ -6,8 +6,14 @@ https://github.com/rust-lang/rust/issues/53945
 
 in fish shell:
 
-`set -x RUSTFLAGS $RUSTFLAGS -C codegen-units=1 -C incremental=fuzz-incremental`
+```fish
+cargo install afl
 
+set -x RUSTFLAGS $RUSTFLAGS -C codegen-units=1 -C incremental=fuzz-incremental
+
+cargo afl build --release
+cargo afl fuzz -i in -o out target/release/torset-afl
+```
 
 ## Needed before starting:
 
